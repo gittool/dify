@@ -455,7 +455,6 @@ services:
     networks:
       - ssrf_proxy_network
       - default
-      - ragflow-network
     extra_hosts:
       - "host.docker.internal:host-gateway"
 
@@ -1062,9 +1061,6 @@ networks:
   opensearch-net:
     driver: bridge
     internal: true
-  ragflow-network:
-    external: true
-    name: ragflow_ragflow
 
 volumes:
   oradata:
