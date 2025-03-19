@@ -672,10 +672,7 @@ services:
       - api
       - web
     ports:
-      - '${EXPOSE_NGINX_PORT:-8080}:${NGINX_PORT:-80}'
-    networks:
-      - default
-      - ragflow-network
+      - '8080:${NGINX_PORT:-80}'
 
   # The Weaviate vector store.
   weaviate:
